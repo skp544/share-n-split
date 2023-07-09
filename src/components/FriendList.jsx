@@ -1,6 +1,6 @@
 import React from "react";
 import { initialFriends } from "../constants/data";
-import Friend from "./Friend";
+import { Friend } from "./";
 
 const FriendList = () => {
   const friends = initialFriends;
