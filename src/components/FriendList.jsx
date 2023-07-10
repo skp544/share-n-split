@@ -1,13 +1,18 @@
 import React from "react";
-import { initialFriends } from "../constants/data";
 import { Friend } from "./";
+// import { initialFriends } from "../constants/data";
 
-const FriendList = () => {
-  const friends = initialFriends;
+const FriendList = ({ friends, onSelection, selectedFriend }) => {
+  // const freinds = initialFriends         // dummy data
   return (
     <ul>
       {friends.map((friend) => (
-        <Friend key={friend.id} friend={friend} />
+        <Friend
+          key={friend.id}
+          friend={friend}
+          onSelection={onSelection}
+          selectedFriend={selectedFriend}
+        />
       ))}
     </ul>
   );
